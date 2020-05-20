@@ -15,7 +15,7 @@ class NationalityTest {
     void serializeToJson() throws Exception {
         final Nationality nationality = new Nationality("Argentina", "https://cdn.sofifa.org/flags/52.png");
 
-        final String expected = MAPPER.writeValueAsString(MAPPER.readValue(fixture("fixtures/nationality.json"), Nationality.class));
+        final String expected = MAPPER.writeValueAsString(MAPPER.readValue(fixture("fixtures/Nationality.json"), Nationality.class));
 
         assertThat(MAPPER.writeValueAsString(nationality)).isEqualTo(expected);
     }
@@ -24,7 +24,7 @@ class NationalityTest {
     void deserializesFromJSON() throws Exception {
         final Nationality nationality = new Nationality("Argentina", "https://cdn.sofifa.org/flags/52.png");
 
-        assertThat(MAPPER.readValue(fixture("fixtures/nationality.json"), Nationality.class))
+        assertThat(MAPPER.readValue(fixture("fixtures/Nationality.json"), Nationality.class))
                 .isEqualTo(nationality);
     }
 }

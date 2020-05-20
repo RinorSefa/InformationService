@@ -15,7 +15,7 @@ class LeagueTest {
     void serializeToJson() throws Exception {
         final League league = new League("Argentina Primera División");
 
-        final String expected = MAPPER.writeValueAsString(MAPPER.readValue(fixture("fixtures/league.json"), League.class));
+        final String expected = MAPPER.writeValueAsString(MAPPER.readValue(fixture("fixtures/League.json"), League.class));
 
         assertThat(MAPPER.writeValueAsString(league)).isEqualTo(expected);
     }
@@ -24,7 +24,7 @@ class LeagueTest {
     void deserializesFromJSON() throws Exception {
         final League league = new League("Argentina Primera División");
 
-        assertThat(MAPPER.readValue(fixture("fixtures/league.json"), League.class))
+        assertThat(MAPPER.readValue(fixture("fixtures/League.json"), League.class))
                 .isEqualTo(league);
     }
 }

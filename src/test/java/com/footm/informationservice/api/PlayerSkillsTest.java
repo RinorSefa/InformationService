@@ -20,7 +20,7 @@ class PlayerSkillsTest {
                 93, 71, 89, 67, 57, 56, 6,
                 13, 6, 13, 7);
 
-        final String expected = MAPPER.writeValueAsString(MAPPER.readValue(fixture("fixtures/playerSkills.json"), PlayerSkills.class));
+        final String expected = MAPPER.writeValueAsString(MAPPER.readValue(fixture("fixtures/PlayerSkills.json"), PlayerSkills.class));
 
         assertThat(MAPPER.writeValueAsString(playerSkills)).isEqualTo(expected);
     }
@@ -34,7 +34,7 @@ class PlayerSkillsTest {
                 93, 71, 89, 67, 57, 56, 6,
                 13, 6, 13, 7);
 
-        assertThat(MAPPER.readValue(fixture("fixtures/playerSkills.json"), PlayerSkills.class))
+        assertThat(MAPPER.readValue(fixture("fixtures/PlayerSkills.json"), PlayerSkills.class))
                 .isEqualTo(playerSkills);
     }
 }

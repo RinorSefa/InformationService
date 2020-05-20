@@ -24,7 +24,7 @@ class PlayerFullSpecificationTest {
                 93, 71, 89, 67, 57, 56, 6,
                 13, 6, 13, 7);
 
-        final String expected = MAPPER.writeValueAsString(MAPPER.readValue(fixture("fixtures/playerFullSpecification.json"), PlayerFullSpecification.class));
+        final String expected = MAPPER.writeValueAsString(MAPPER.readValue(fixture("fixtures/PlayerFullSpecification.json"), PlayerFullSpecification.class));
 
         assertThat(MAPPER.writeValueAsString(playerFullSpecification)).isEqualTo(expected);
     }
@@ -43,7 +43,7 @@ class PlayerFullSpecificationTest {
                 93, 71, 89, 67, 57, 56, 6,
                 13, 6, 13, 7);
 
-        assertThat(MAPPER.readValue(fixture("fixtures/playerFullSpecification.json"), PlayerFullSpecification.class))
+        assertThat(MAPPER.readValue(fixture("fixtures/PlayerFullSpecification.json"), PlayerFullSpecification.class))
                 .isEqualTo(playerFullSpecification);
     }
 }

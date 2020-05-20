@@ -27,7 +27,7 @@ class PlayerPositionsTest {
                 82, 81, 81, 81, 82, 85, 85, 85, 82, 83, 83, 83,
                 82, 71, 73, 73, 73, 71, 68, 63, 63, 63, 68);
 
-        assertThat(MAPPER.readValue(fixture("fixtures/playerPositions.json"), PlayerPositions.class))
+        assertThat(MAPPER.readValue(fixture("fixtures/PlayerPositions.json"), PlayerPositions.class))
                 .isEqualTo(playerPositions);
     }
 }
